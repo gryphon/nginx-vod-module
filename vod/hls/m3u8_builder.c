@@ -1299,6 +1299,9 @@ m3u8_builder_build_master_playlist(
 	if (!conf->force_unmuxed_segments && encryption_method != HLS_ENC_SAMPLE_AES_CENC)
 	{
 		flags |= ADAPTATION_SETS_FLAG_MUXED;
+		flags |= ADAPTATION_SETS_FLAG_AVOID_AUDIO_ONLY;
+		flags |= ADAPTATION_SETS_FLAG_EXCLUDE_MUXED_AUDIO;
+		
 	}
 
 	rc = manifest_utils_get_adaptation_sets(
