@@ -2841,7 +2841,7 @@ mp4_parser_process_moov_atom_callback(void* ctx, atom_info_t* atom_info)
 		vod_log_debug2(VOD_LOG_DEBUG_LEVEL, context->request_context->log, 0,
 			"mp4_parser_process_moov_atom_callback: codec %uD not supported for this request mask 0x%xd",
 			metadata_parse_context.media_info.codec_id, metadata_parse_context.parse_params.codecs_mask);
-		return VOD_OK;
+		// return VOD_OK;
 	}
 
 	// make sure we got the extra data
