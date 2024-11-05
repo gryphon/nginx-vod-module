@@ -428,7 +428,8 @@ track_group_key_init(
 	case MEDIA_TYPE_AUDIO:
 		if ((flags & ADAPTATION_SETS_FLAG_MULTI_AUDIO_CODEC) != 0)
 		{
-			key->codec_id = track->media_info.codec_id;
+			// key->codec_id = track->media_info.codec_id;
+			key->codec_id = 0;
 		}
 		else
 		{
